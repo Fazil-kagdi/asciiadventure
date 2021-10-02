@@ -111,7 +111,7 @@ namespace asciiadventure {
                 result.Append("|\n");
             }
             result.Append('+');
-            result.Append(String.Concat(Enumerable.Repeat("-", NumRows)));
+            result.Append(String.Concat(Enumerable.Repeat("-", NumCols)));
             result.Append('+');
             return result.ToString();
         }

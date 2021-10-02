@@ -54,7 +54,9 @@ namespace asciiadventure {
             if (!Screen.IsInBounds(newRow, newCol)) {
                 return "";
             }
+            
             GameObject gameObject = Screen[newRow, newCol];
+    
             if (gameObject != null && !gameObject.IsPassable()) {
                 // TODO: How to handle other objects?
                 // walls just stop you
@@ -65,13 +67,37 @@ namespace asciiadventure {
                 // can have a "shout" command, so some objects require shouting
                 return "TODO: Handle interaction";
             }
+            else if (gameObject != null && gameObject.ToString() == "&" && gameObject.IsPassable()) {
+                if(newRow==1 && newCol==6){
+                Screen[Row,Col]=null;
+                this.Row = 8;
+                this.Col = 13;
+                }
+                else if(newRow==8 && newCol==13){
+                Screen[Row,Col]=null;
+                this.Row = 1;
+                this.Col = 6;
+                }
+                return "TODO: Handle interaction";
+            }
+            else if (gameObject != null && gameObject.ToString() == "%" && gameObject.IsPassable()) {
+                Game.lives++;
+                Game.message = "You just got an extra life";
+            }
+            else if (gameObject != null && gameObject.ToString() == "!" && gameObject.IsPassable() && this.ToString()!="#") {
+                Game.gameOver = true;
+                this.Token = "*";
+                Game.message = "A trap got you.";
+            }
             // Now just make the move
             int originalRow = Row;
             int originalCol = Col;
             // now change the location of the object, if the move was legal
             Row = newRow;
             Col = newCol;
-            Screen[originalRow, originalCol] = null;
+            if(originalRow==8 && originalCol==13){Teleporter teleporter1 = new Teleporter(8, 13, Screen);}
+            else if(originalRow==1 && originalCol==6){Teleporter teleporter1 = new Teleporter(1, 6, Screen);}
+            else {Screen[originalRow, originalCol] = null;}
             Screen[Row, Col] = this;
             return "";
         }
@@ -83,6 +109,29 @@ namespace asciiadventure {
 
     class Treasure : GameObject {
         public Treasure(int row, int col, Screen screen) : base(row, col, "T", screen) {}
+
+        public override Boolean IsPassable() {
+            return true;
+        }
+    }
+    class Teleporter : GameObject {
+        public Teleporter(int row, int col, Screen screen) : base(row, col, "&", screen) {}
+
+        public override Boolean IsPassable() {
+            return true;
+        }
+    }
+
+    class Life : GameObject {
+        public Life(int row, int col, Screen screen) : base(row, col, "%", screen) {}
+
+        public override Boolean IsPassable() {
+            return true;
+        }
+    }
+
+    class Trap : GameObject {
+        public Trap(int row, int col, Screen screen) : base(row, col, "!", screen) {}
 
         public override Boolean IsPassable() {
             return true;

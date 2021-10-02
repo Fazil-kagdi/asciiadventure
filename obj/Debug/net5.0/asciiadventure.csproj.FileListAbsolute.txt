@@ -1,0 +1,15 @@
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/asciiadventure.deps.json
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/asciiadventure.runtimeconfig.json
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/asciiadventure.runtimeconfig.dev.json
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/asciiadventure.dll
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/ref/asciiadventure.dll
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/bin/Debug/net5.0/asciiadventure.pdb
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.csprojAssemblyReference.cache
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.AssemblyInfoInputs.cache
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.AssemblyInfo.cs
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.csproj.CoreCompileInputs.cache
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.dll
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/ref/asciiadventure.dll
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.pdb
+/Users/fazilkagdi/Documents/GitHub/asciiadventure/obj/Debug/net5.0/asciiadventure.genruntimeconfig.cache
