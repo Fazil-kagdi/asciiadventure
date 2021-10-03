@@ -84,10 +84,14 @@ namespace asciiadventure {
                 Game.lives++;
                 Game.message = "You just got an extra life";
             }
-            else if (gameObject != null && gameObject.ToString() == "!" && gameObject.IsPassable() && this.ToString()!="#") {
+            else if (gameObject != null && gameObject.ToString() == "!" && gameObject.IsPassable() && this.ToString()!="#" && Game.lives==0) {
                 Game.gameOver = true;
                 this.Token = "*";
                 Game.message = "A trap got you.";
+            }
+            else if (gameObject != null && gameObject.ToString() == "!" && gameObject.IsPassable() && this.ToString()!="#") {
+                Game.lives=0;
+                Game.message = "A trap got you, but you got an extra life continue playing";
             }
             // Now just make the move
             int originalRow = Row;
